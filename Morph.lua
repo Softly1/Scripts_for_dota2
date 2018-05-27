@@ -19,11 +19,11 @@ morph.defaultAbilities = {
  {"npc_dota_hero_enigma", "enigma_black_hole", 720, false},
  {"npc_dota_hero_magnataur", "magnataur_reverse_polarity", 430, false},
  {"npc_dota_hero_slardar", "slardar_slithereen_crush", 355, true},
- {"npc_dota_hero_centaur", "centaur_hoof_stomp", 345, true}
+ {"npc_dota_hero_centaur", "centaur_hoof_stomp", 350, true}
 
--- {"npc_dota_hero_batrider", "batrider_flaming_lasso", 170
+-- {"npc_dota_hero_batrider", "batrider_flaming_lasso", 250
 -- {"npc_dota_hero_faceless_void", "faceless_void_chronosphere", 1100
--- {"npc_dota_hero_legion_commander", "legion_commander_duel", 150
+-- {"npc_dota_hero_legion_commander", "legion_commander_duel", 200
 -- {"npc_dota_hero_beastmaster", "beastmaster_primal_roar", 600
 -- {"npc_dota_hero_sven", "sven_storm_bolt", 600
 -- {"npc_dota_hero_bane", "bane_fiends_grip", 625

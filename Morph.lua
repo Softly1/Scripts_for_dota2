@@ -3,9 +3,9 @@
 morph.optionEnable = Menu.AddOptionBool({"Hero Specific", "Morph"}, "Enable", false)
 morph.First_Table = Menu.AddOptionBool({"Hero Specific", "Morph","First_Table"}, "Enable", false)
 morph.AdditionalAbilities = Menu.AddOptionBool({"Hero Specific", "Morph","First_Table"}, "[unstable]additionalAbilities", false)
-morph.AutoKill = Menu.AddOptionBool({"Hero Specific", "Morph", "Combo"}, "Enable", false)
-morph.AutoKillKey = Menu.AddKeyOption({"Hero Specific", "Morph", "Combo"}, "Toggle Key", Enum.ButtonCode.KEY_0)
-morph.customResist = Menu.AddOptionSlider({"Hero Specific", "Morph", "Combo"}, "customResist", 0, 80, 25)
+morph.AutoKill = Menu.AddOptionBool({"Hero Specific", "Morph", "Combo1"}, "Enable", false)
+morph.AutoKillKey = Menu.AddKeyOption({"Hero Specific", "Morph", "Combo1"}, "Toggle Key", Enum.ButtonCode.KEY_0)
+morph.customResist = Menu.AddOptionSlider({"Hero Specific", "Morph", "Combo1"}, "customResist", 0, 80, 25)
 
 morph.myHero = nil
 morph.players = {}
@@ -37,13 +37,13 @@ morph.additionalAbilities = {
 	{"npc_dota_hero_enigma", "enigma_black_hole", 720, false},
 	{"npc_dota_hero_magnataur", "magnataur_reverse_polarity", 430, false},
 	{"npc_dota_hero_slardar", "slardar_slithereen_crush", 355, true},
-	{"npc_dota_hero_centaur", "centaur_hoof_stomp", 345, true},
+	{"npc_dota_hero_centaur", "centaur_hoof_stomp", 350, true},
 
 	--------------------------------------------------------------------
 
-	{"npc_dota_hero_batrider", "batrider_flaming_lasso", 170, false},
+	{"npc_dota_hero_batrider", "batrider_flaming_lasso", 250, false},
 	{"npc_dota_hero_faceless_void", "faceless_void_chronosphere", 1100, false},
-	{"npc_dota_hero_legion_commander", "legion_commander_duel", 150, false},
+	{"npc_dota_hero_legion_commander", "legion_commander_duel", 200, false},
 	{"npc_dota_hero_pudge", "pudge_dismember", 160, false}
 }
 
@@ -101,7 +101,7 @@ function morph.OnUpdate()
 		for i = 1, Heroes.Count() do
    			local hero = Heroes.Get(i)
    			if not Entity.IsSameTeam(morph.myHero, hero) and not morph.players[Hero.GetPlayerID(hero)] and hero ~= morph.myHero then 
-   				morph.players[Hero.GetPlayerID(hero)] = Menu.AddOptionBool({"Hero Specific", "Morph", "Combo"}, string.upper(string.sub(NPC.GetUnitName(hero), 15)), false)
+   				morph.players[Hero.GetPlayerID(hero)] = Menu.AddOptionBool({"Hero Specific", "Morph", "Combo1"}, string.upper(string.sub(NPC.GetUnitName(hero), 15)), false)
    				return
    			end
    		end 

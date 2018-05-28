@@ -3,9 +3,9 @@
 morph.optionEnable = Menu.AddOptionBool({"Hero Specific", "Morph"}, "Enable", false)
 morph.First_Table = Menu.AddOptionBool({"Hero Specific", "Morph","First_Table"}, "Enable", false)
 morph.AdditionalAbilities = Menu.AddOptionBool({"Hero Specific", "Morph","First_Table"}, "[unstable]additionalAbilities", false)
-morph.AutoKill = Menu.AddOptionBool({"Hero Specific", "Morph", "Combo1"}, "Enable", false)
-morph.AutoKillKey = Menu.AddKeyOption({"Hero Specific", "Morph", "Combo1"}, "Toggle Key", Enum.ButtonCode.KEY_0)
-morph.customResist = Menu.AddOptionSlider({"Hero Specific", "Morph", "Combo1"}, "customResist", 0, 80, 25)
+morph.AutoKill = Menu.AddOptionBool({"Hero Specific", "Morph", "ComboM"}, "Enable", false)
+morph.AutoKillKey = Menu.AddKeyOption({"Hero Specific", "Morph", "ComboM"}, "Toggle Key", Enum.ButtonCode.KEY_0)
+morph.customResist = Menu.AddOptionSlider({"Hero Specific", "Morph", "ComboM"}, "customResist", 0, 80, 25)
 
 morph.myHero = nil
 morph.players = {}
@@ -101,7 +101,7 @@ function morph.OnUpdate()
 		for i = 1, Heroes.Count() do
    			local hero = Heroes.Get(i)
    			if not Entity.IsSameTeam(morph.myHero, hero) and not morph.players[Hero.GetPlayerID(hero)] and hero ~= morph.myHero then 
-   				morph.players[Hero.GetPlayerID(hero)] = Menu.AddOptionBool({"Hero Specific", "Morph", "Combo1"}, string.upper(string.sub(NPC.GetUnitName(hero), 15)), false)
+   				morph.players[Hero.GetPlayerID(hero)] = Menu.AddOptionBool({"Hero Specific", "Morph", "ComboM"}, string.upper(string.sub(NPC.GetUnitName(hero), 15)), false)
    				return
    			end
    		end 

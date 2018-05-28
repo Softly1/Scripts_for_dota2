@@ -14,16 +14,16 @@ Font = Renderer.LoadFont("Tahoma", 22, Enum.FontWeight.BOLD)
 morph.localDmg = 0
 
 morph.defaultAbilities = {
- {"npc_dota_hero_axe", "axe_berserkers_call", 350, false}, --false - пробивает через бкб
+ {"npc_dota_hero_axe", "axe_berserkers_call", 340, false}, --false - пробивает через бкб
  {"npc_dota_hero_tidehunter", "tidehunter_ravage", 1250, true}, --true - не пробивает бкб
  {"npc_dota_hero_enigma", "enigma_black_hole", 720, false},
  {"npc_dota_hero_magnataur", "magnataur_reverse_polarity", 430, false},
  {"npc_dota_hero_slardar", "slardar_slithereen_crush", 355, true},
- {"npc_dota_hero_centaur", "centaur_hoof_stomp", 350, true}
+ {"npc_dota_hero_centaur", "centaur_hoof_stomp", 365, true}
 
 -- {"npc_dota_hero_batrider", "batrider_flaming_lasso", 250
 -- {"npc_dota_hero_faceless_void", "faceless_void_chronosphere", 1100
--- {"npc_dota_hero_legion_commander", "legion_commander_duel", 220
+-- {"npc_dota_hero_legion_commander", "legion_commander_duel", 230
 -- {"npc_dota_hero_beastmaster", "beastmaster_primal_roar", 600
 -- {"npc_dota_hero_sven", "sven_storm_bolt", 600
 -- {"npc_dota_hero_bane", "bane_fiends_grip", 625
@@ -32,18 +32,18 @@ morph.defaultAbilities = {
 --	{"npc_dota_hero_disruptor", "disruptor_static_storm", 1450}
 }
 morph.additionalAbilities = {
-	{"npc_dota_hero_axe", "axe_berserkers_call", 350, false},
+	{"npc_dota_hero_axe", "axe_berserkers_call", 340, false},
 	{"npc_dota_hero_tidehunter", "tidehunter_ravage", 1250, true},
 	{"npc_dota_hero_enigma", "enigma_black_hole", 720, false},
 	{"npc_dota_hero_magnataur", "magnataur_reverse_polarity", 430, false},
 	{"npc_dota_hero_slardar", "slardar_slithereen_crush", 355, true},
-	{"npc_dota_hero_centaur", "centaur_hoof_stomp", 350, true},
+	{"npc_dota_hero_centaur", "centaur_hoof_stomp", 365, true},
 
 	--------------------------------------------------------------------
 
 	{"npc_dota_hero_batrider", "batrider_flaming_lasso", 250, false},
 	{"npc_dota_hero_faceless_void", "faceless_void_chronosphere", 1100, false},
-	{"npc_dota_hero_legion_commander", "legion_commander_duel", 220, false},
+	{"npc_dota_hero_legion_commander", "legion_commander_duel", 230, false},
 	{"npc_dota_hero_pudge", "pudge_dismember", 160, false}
 }
 

@@ -12,25 +12,6 @@ Lina.optionAttack = Menu.AddOptionBool({ "Hero Specific", "Lina" }, "Attack afte
 
 
 
-Lina.optionAutoLaguna = Menu.AddOptionBool({ "Hero Specific", "Lina" }, "Auto Laguna Blade", false)
-
-
-
-Lina.optionLagunaCheckAM = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "AM Shield", true)
-
-Lina.optionLagunaCheckLotus = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "Lotus Orb", true)
-
-Lina.optionLagunaCheckBladeMail = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "Blade Mail", true)
-
-Lina.optionLagunaCheckNyx = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "Nyx Carapace", true)
-
-Lina.optionLagunaCheckAegis = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "Enemy has Aegis", false)
-
-Lina.optionLagunaCheckAbbadon = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "Abaddon Ultimate", true)
-
-Lina.optionLagunaInvisible = Menu.AddOptionBool({ "Hero Specific", "Lina", "Do not use Laguna when" }, "When you're invisible", false)
-
-
 
 function Lina.OnUpdate()
 

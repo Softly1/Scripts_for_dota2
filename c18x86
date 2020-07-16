@@ -1,0 +1,71 @@
+local sven = {}
+
+sven.optionEnable = Menu.AddOptionBool({"Hero Specific", "Sven"}, "Enable", false)
+sven.Combo = Menu.AddOptionBool({"Hero Specific", "Sven", "Combo"}, "Enable", false)
+sven.ComboKey = Menu.AddKeyOption({"Hero Specific", "Sven", "Combo Key"}, "Toggle Key", Enum.ButtonCode.KEY_0)
+
+
+
+sven.myHero = nil
+sven.players = {}
+-------------------------------------------------
+function sven.OnUpdate()
+
+	if not Menu.IsEnabled(sven.optionEnable) or not Engine.IsInGame() or not Heroes.GetLocal() then 
+
+		for i = 0, 10 do
+
+      		if sven.players[i] then
+
+        		Menu.RemoveOption(sven.players[i]) 
+
+        		sven.players[i] = nil
+
+     		end
+
+    	end return 
+
+    end
+    
+----------------------------------------------------------------
+    sven.myHero = Heroes.GetLocal()
+
+	if NPC.GetUnitName(sven.myHero) ~= "npc_dota_hero_sven" then return end
+
+	if Menu.IsKeyDownOnce(sven.ComboKey) then
+
+		if Menu.IsEnabled(sven.Combo) then
+
+			Menu.SetEnabled(sven.Combo, false)
+
+		else 
+
+			Menu.SetEnabled(sven.Combo, true)
+
+		end		
+
+	end
+  
+  -----------------------------------------------
+  
+   function sven.Combo(myHero, enemy)
+
+    local storm = NPC.GetAbilityByIndex(myHero, 0)
+
+    local myMana = NPC.GetMana(myHero)
+
+    if enemy and Entity.IsAlive(enemy) then
+    
+    
+    
+    
+    
+    ---------- переделать под свена----------
+    if bolt and Ability.IsCastable(bolt, myMana) and Menu.IsEnabled(Zeus.optionBolt) and not Zeus.IsInAbilityPhase(myHero) then
+
+					Ability.CastTarget(bolt, target)
+
+					return true
+
+				end
+  
